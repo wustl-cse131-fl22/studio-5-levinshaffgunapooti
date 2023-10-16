@@ -37,21 +37,16 @@ public class Methods {
 		StdDraw.setPenColor(StdDraw.BLUE);
 		StdDraw.filledCircle(x, y, radius*(3.0/4.0));
 
-		
-
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
 		StdDraw.setPenColor(StdDraw.RED);
 		StdDraw.filledCircle(x, y, radius*(1.0/2.0));
 
-		
-
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
 		StdDraw.setPenColor(StdDraw.YELLOW);
 		StdDraw.filledCircle(x, y, radius*(1.0/4.0));
-
-		
+		//no return at the end because function is void
 	}
 
 	/**
@@ -68,17 +63,16 @@ public class Methods {
 	public static String substituteAll(String source, char target, String replacement) {
 		String result = "";
 		// TODO: Finish this method
-		char[] array = source.toCharArray();
+		char[] array = source.toCharArray(); //changes the given string (source) to array of characters
 		
 		for(int i = 0; i<array.length; i++) {
 			if(array[i]==target) {
-				result += replacement;
+				result += replacement; //replaces the string result with the replacement string if that index of the array equals the target character
 			}
 			else {
-				result += array[i];
+				result += array[i]; //result equals the original character 
 			}
 		}
-		
 		return result;
 	}
 
@@ -92,9 +86,8 @@ public class Methods {
 		int sum = 0;
 		// FIXME: Compute the sum of the values in an array
 		for(int i = 0; i<values.length; i++) {
-			sum += values[i];
+			sum += values[i]; //+= allows the array to add all numbers together (sum = sum +value at index i)
 		}
-		
 		return sum;
 	}
 
@@ -106,15 +99,12 @@ public class Methods {
 	 * @return and array of size that's filled with value
 	 */
 	public static int[] filledArray(int length, int value) {
-		int[] values = new int[length]; // FIXME: Create an array of the appropriate size
+		int[] values = new int[length]; // FIXME: Create an array of the appropriate size //length of area is length because it's a parameter used)
 		// TODO: Finish this method
 		
 		for(int i = 0; i<values.length; i++) {
-			values[i] = value;
+			values[i] = value; //sets value at i equal to the value passed in as parameter
 		}
-
-		
-
 		return values;
 	}
 	
@@ -130,15 +120,9 @@ public class Methods {
 		// TODO: Finish this method
 		int sum = 0;
 		for(int i = 0; i<array.length; i++) {
-			sum+=array[i];;
+			sum+=array[i]; //sums up all the area values (like the arraySum method) --> should have used arraySum method and divided that by array length 
 		}
-		mean = (double) sum/array.length;
-
-		
-
+		mean = (double) sum/array.length; //divides the sum of the array elements by the length of the array
 		return mean;
 	}
-	
-
-	
 }
