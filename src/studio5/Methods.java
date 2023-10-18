@@ -30,7 +30,7 @@ public class Methods {
 	public static void drawBullsEye(double x, double y, double radius) {
 		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.filledCircle(x, y, radius);
-
+		
 		// TODO: Draw the remaining rings of the bull's eye
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
@@ -64,7 +64,6 @@ public class Methods {
 		String result = "";
 		// TODO: Finish this method
 		char[] array = source.toCharArray(); //changes the given string (source) to array of characters
-		
 		for(int i = 0; i<array.length; i++) {
 			if(array[i]==target) {
 				result += replacement; //replaces the string result with the replacement string if that index of the array equals the target character
@@ -101,7 +100,6 @@ public class Methods {
 	public static int[] filledArray(int length, int value) {
 		int[] values = new int[length]; // FIXME: Create an array of the appropriate size //length of area is length because it's a parameter used)
 		// TODO: Finish this method
-		
 		for(int i = 0; i<values.length; i++) {
 			values[i] = value; //sets value at i equal to the value passed in as parameter
 		}
